@@ -707,24 +707,19 @@ export class NetflixProductService implements IProductService<NetflixProduct> {
 #### SOLID 原则的应用
 
 1. 单一职责原则 (SRP)：
-
-在早餐规划示例中，每个模块（如 IBreakfastService、IBreakfastServiceRepository）都承担了明确的职责。IBreakfastService 负责提供早餐项目，而 IBreakfastServiceRepository 则专注于数据访问逻辑。这样的划分确保了模块的变化不会影响其他部分，提升了代码的可维护性。
+   在早餐规划示例中，每个模块（如 IBreakfastService、IBreakfastServiceRepository）都承担了明确的职责。IBreakfastService 负责提供早餐项目，而 IBreakfastServiceRepository 则专注于数据访问逻辑。这样的划分确保了模块的变化不会影响其他部分，提升了代码的可维护性。
 
 2. 开放-封闭原则 (OCP)：
-
-在早餐服务层，新的早餐类型（如“西式早餐”或“中式早餐”）可以通过扩展 IBreakfastService 接口来实现，而无需修改现有的代码。这种设计使得系统可以在不修改核心逻辑的情况下进行扩展。
+   在早餐服务层，新的早餐类型（如“西式早餐”或“中式早餐”）可以通过扩展 IBreakfastService 接口来实现，而无需修改现有的代码。这种设计使得系统可以在不修改核心逻辑的情况下进行扩展。
 
 3. 里氏替换原则 (LSP)：
-
-在 Uber Eats 和 Netflix 的框架中，任何实现了 IProductService 的类都可以无缝替换，而不会影响系统的正常运作。这可以让我们根据业务需求轻松替换或扩展不同的产品服务实现。
+   在 Uber Eats 和 Netflix 的框架中，任何实现了 IProductService 的类都可以无缝替换，而不会影响系统的正常运作。这可以让我们根据业务需求轻松替换或扩展不同的产品服务实现。
 
 4. 接口分隔原则 (ISP)：
-
-通过将不同的服务接口分离（如 IPaymentService 和 IOrderService），每个服务只需要实现与自己相关的功能，避免了实现不必要的功能。这种设计减少了不必要的依赖，使系统更清晰、更易于理解和实现。
+   通过将不同的服务接口分离（如 IPaymentService 和 IOrderService），每个服务只需要实现与自己相关的功能，避免了实现不必要的功能。这种设计减少了不必要的依赖，使系统更清晰、更易于理解和实现。
 
 5. 依赖反转原则 (DIP)：
-
-类大多依赖于抽象接口而非具体实现，例如 DefaultBreakfastService 依赖于 IBreakfastServiceRepository 接口，通过这种方式，可以通过依赖注入轻松替换不同的存储库实现，从而提高系统的灵活性。
+   类大多依赖于抽象接口而非具体实现，例如 DefaultBreakfastService 依赖于 IBreakfastServiceRepository 接口，通过这种方式，可以通过依赖注入轻松替换不同的存储库实现，从而提高系统的灵活性。
 
 #### DDD 的应用
 
