@@ -759,7 +759,7 @@ const service = new BreakfastService();
 console.log(service.getBreakfast("Japanese")); // 出力: ご飯 + 味噌汁
 ```
 
-1. **モジュール化設計の実装**  
+2. **モジュール化設計の実装**  
    モジュール化された設計では、既存の独立したモジュールを組み合わせることで新しい機能を実現します。JapaneseBreakfastService は JapaneseRice や MisoSoup モジュールを組み合わせることで簡単に和風朝食を生成できます。
 
 ```typescript
@@ -811,7 +811,7 @@ console.log(japaneseService.getBreakfast()); // 出力: ご飯 + 味噌汁
 **场景 2： カスタマイズ機能**  
 要件: ユーザーが動的に異なる食材モジュールを選択して自分の朝食を作成できるようにする。
 
-1. **モジュール化されていない設計の実装**  
+1. **非モジュール設計実装**  
    モジュール化されていない設計では、ユーザー定義オプションはハードコーディングで処理する必要があり、柔軟性が低く、メンテナンスコストが高くなります。
 
 ```typescript
