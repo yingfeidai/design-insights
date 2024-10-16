@@ -438,7 +438,7 @@ westernBreakfast?.forEach((item) => {
 });
 ```
 
-### Part 6: Uber Eats and Netflix Services Example and Code Walkthrough – Modular Layered Architecture Approach
+## Part 6: Uber Eats and Netflix Services Example and Code Walkthrough – Modular Layered Architecture Approach
 
 通过 Uber Eats 和 Netflix 的例子，展示如何通过模块化架构管理不同服务，确保系统的扩展性。
 
@@ -700,7 +700,7 @@ export class NetflixProductService implements IProductService<NetflixProduct> {
 }
 ```
 
-### Part 7: Key Design Principles - SOLID and DDD
+## Part 7: Key Design Principles - SOLID and DDD
 
 在模块化设计中，遵循 SOLID 原则和领域驱动设计（DDD）可以大幅提升代码的可维护性、可扩展性和灵活性。以下将使用上述代码来解释这些设计原则。
 
@@ -735,7 +735,7 @@ export class NetflixProductService implements IProductService<NetflixProduct> {
 4. 仓储模式：
    IBreakfastServiceRepository 和 IProductRepository 等接口提供了数据访问的抽象层，确保了领域逻辑与数据访问逻辑的分离。这样设计使得在未来轻松替换数据访问层而不影响核心业务逻辑。
 
-### Part 8: Scalability and Flexibility
+## Part 8: Scalability and Flexibility
 
 #### 示例对比：无模块化设计 vs. 使用模块化设计
 
@@ -928,7 +928,7 @@ console.log(customService.createCustomBreakfast(userSelection)); // 输出：米
 
 模块化设计能够显著提高系统的扩展性、灵活性和可维护性。与无模块化设计相比，模块化架构能够更好地应对复杂需求，减少技术债务，支持业务的长期演进。
 
-### Part 9: Conclusion
+## Part 9: Conclusion
 
 通过分层模块化架构设计，我们不仅解决了当前需求，还为系统的长期演进奠定了基础。该架构带来了以下几个重要优势：
 

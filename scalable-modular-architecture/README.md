@@ -436,7 +436,7 @@ westernBreakfast?.forEach((item) => {
 });
 ```
 
-### Part 6: Uber Eats と Netflix サービスの実例とコード解説 – モジュールレイヤアーキテクチャアプローチ
+## Part 6: Uber Eats と Netflix サービスの実例とコード解説 – モジュールレイヤアーキテクチャアプローチ
 
 Uber Eats と Netflix の例を通じて、モジュール化されたアーキテクチャがどのように異なるサービスを管理し、システムの拡張性を確保するかを示します。
 
@@ -453,7 +453,7 @@ graph TD
 
 Netflix と Uber Eats は、基盤層で共通のロジックを共有し、モジュール化と拡張性を確保しています。
 
-#### 三層モジュラーアーキテクチャ
+### 三層モジュラーアーキテクチャ
 
 以下は、Uber Eats と Netflix のサービスにおける三層モジュラーアーキテクチャです。
 これにより、これらのモジュールがどのように組み合わせられ、インターフェースを通じてサービス層と基盤層を接続しているかがわかります。
@@ -697,11 +697,11 @@ export class NetflixProductService implements IProductService<NetflixProduct> {
 }
 ```
 
-### Part 7: 重要な設計原則 - SOLID と DDD
+## Part 7: 重要な設計原則 - SOLID と DDD
 
 モジュール化設計では、SOLID 原則およびドメイン駆動設計（DDD）を従うことで、コードの保守性、拡張性、柔軟性が大幅に向上します。上記のコードでこれらの設計原則を説明します。
 
-#### SOLID 原則の適用
+### SOLID 原則の適用
 
 1. 単一責任原則 (SRP)：  
    朝食プランニングの例では、各モジュール（例: IBreakfastService、IBreakfastServiceRepository）は明確な責任を担っています。IBreakfastService は朝食アイテムの提供を担当し、IBreakfastServiceRepository はデータアクセスロジックに専念しています。このような分割により、モジュールの変更が他の部分に影響を与えず、コードの保守性が向上しています。
@@ -732,9 +732,9 @@ export class NetflixProductService implements IProductService<NetflixProduct> {
 4. リポジトリパターン:  
    IBreakfastServiceRepository や IProductRepository などのインターフェースは、データソースとのやり取りを抽象化し、ドメインモデルとデータアクセスロジックを分離します。この設計により、必要に応じてデータアクセス層の実装を容易に差し替えられ、ドメインロジックに影響を与えることはありません。
 
-### Part 8: 拡張性と柔軟性
+## Part 8: 拡張性と柔軟性
 
-#### 比較例: 非モジュール設計 vs. モジュール設計
+### 比較例: 非モジュール設計 vs. モジュール設計
 
 **场景 1：JapaneseBreakfastService の追加**
 要件: ご飯と味噌汁を組み合わせた `JapaneseBreakfastService`クラスを実装する。
@@ -922,7 +922,7 @@ console.log(customService.createCustomBreakfast(userSelection)); // 出力: ご�
 
 モジュール化設計は、システムの拡張性、柔軟性、および保守性を大幅に向上させることができます。モジュール化されていない設計と比較して、モジュール化アーキテクチャは複雑な要件をより効果的に対応し、技術的負債を減らし、ビジネスの長期的な発展をサポートします。
 
-### Part 9: Conclusion
+## Part 9: まとめ
 
 この設計により、現在のニーズを解決するだけでなく、システムの長期的な進化の基盤を築きました。このアーキテクチャは、以下の重要な利点をもたらします：
 
