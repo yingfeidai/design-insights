@@ -722,7 +722,7 @@ In modular design, following the SOLID principles and Domain-Driven Design (DDD)
 5. Dependency Inversion Principle (DIP):
    Classes generally depend on abstract interfaces rather than concrete implementations. For example, DefaultBreakfastService depends on the IBreakfastServiceRepository interface, allowing for easy repository replacement through dependency injection, improving system flexibility.
 
-#### Domain-Driven Design (DDD) Principles:
+#### Domain-Driven Design (DDD) Principles
 
 1. Domain Models:
    In the breakfast planning, Uber Eats, and Netflix frameworks, the foundation layer defines domain objects (e.g., IBreakfastItem, IProduct) that reflect business rules and requirements, ensuring system robustness and domain consistency.
