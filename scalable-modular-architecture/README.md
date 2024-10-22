@@ -144,7 +144,7 @@ flowchart LR
     end
 
     %% ユーザーインタラクション層 - ユーザーの選択
-    subgraph UserLayer[ユーザー層]
+    subgraph UserLayer[ユーザーインタラクション層]
         User[ユーザー]
     end
 
