@@ -59,7 +59,7 @@ Major design challenges in building scalable systems:
    - Early design: Focus on flexibility for functional expansion, allowing rapid response to changes.
    - Performance optimization: In high-concurrency scenarios, asynchronous processing and resource scheduling mechanisms improve system performance.
 
-4. **分层架构与灵活设计**
+4. **Layered Architecture and Flexible Design**
    The three-tier architecture (core layer, service layer, user interaction layer) ensures separation of concerns and flexible expansion. The core layer handles essential functionality, the service layer implements business logic, and the user interaction layer simplifies interaction with external systems.
 
    - Unidirectional dependencies: Higher layers depend only on lower layers, avoiding circular dependencies and improving maintainability.
@@ -705,7 +705,7 @@ export class NetflixProductService implements IProductService<NetflixProduct> {
 
 In modular design, following the SOLID principles and Domain-Driven Design (DDD) significantly enhances the maintainability, scalability, and flexibility of the code. Below, we'll use the previously mentioned code to explain these design principles.
 
-#### SOLID 原则的应用
+### SOLID principles
 
 1. Single Responsibility Principle (SRP):
    In the breakfast planning example, each module (e.g., IBreakfastService, IBreakfastServiceRepository) has a distinct responsibility. IBreakfastService is responsible for providing breakfast items, while IBreakfastServiceRepository focuses on data access logic. This separation ensures that changes in one module don't affect others, improving code maintainability.
