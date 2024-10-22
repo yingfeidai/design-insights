@@ -11,7 +11,7 @@ UserInteractionLayer --> FoundationLayer
 系统设计中，扩展性尤为重要，不仅要满足当前需求，还要适应未来变化。然而，在构建可扩展系统时，我们常面临以下问题：
 
 - 如何在模块之间保持低耦合？
-- 怎样明确各模块的责任并控制复杂性？
+- 如何控制复杂度的同时，明确各模块职责？
 
 本篇将介绍一种三层模块化架构，展示如何提升系统的灵活性、可维护性和重用性。
 
@@ -455,7 +455,7 @@ graph TD
 
 Netflix 和 Uber Eats 通过基础层共享通用逻辑，确保了模块化和可扩展性。
 
-#### 三层模块架构
+### 三层模块架构
 
 以下是 Uber Eats 和 Netflix 服务的三层模块架构，它们展示了如何组织这些模块，并通过接口将服务层与基础层连接起来。
 
@@ -501,7 +501,7 @@ flowchart TD
         NetflixPaymentService["支付服务"]
         NetflixOrderService["订单管理服务"]
         NetflixContentService["内容服务"]
-        NetflixUserService["用户认证服务"]
+        NetflixUserService["用户管理服务"]
     end
 
     %% 基础层
@@ -704,7 +704,7 @@ export class NetflixProductService implements IProductService<NetflixProduct> {
 
 在模块化设计中，遵循 SOLID 原则和领域驱动设计（DDD）可以大幅提升代码的可维护性、可扩展性和灵活性。以下将使用上述代码来解释这些设计原则。
 
-#### SOLID 原则的应用
+### SOLID 原则的应用
 
 1. 单一职责原则 (SRP)：
    在早餐规划示例中，每个模块（如 IBreakfastService、IBreakfastServiceRepository）都承担了明确的职责。IBreakfastService 负责提供早餐项目，而 IBreakfastServiceRepository 则专注于数据访问逻辑。这样的划分确保了模块的变化不会影响其他部分，提升了代码的可维护性。
@@ -737,7 +737,7 @@ export class NetflixProductService implements IProductService<NetflixProduct> {
 
 ## Part 8: Scalability and Flexibility
 
-#### 示例对比：无模块化设计 vs. 使用模块化设计
+### 示例对比：无模块化设计 vs. 使用模块化设计
 
 **场景 1：增加 JapaneseBreakfastService**
 要求：实现一个服务类 JapaneseBreakfastService，组合米饭和味噌汤，生成日式早餐。
